@@ -7,6 +7,7 @@ use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -48,37 +49,44 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
+    #[Groups(['user:read'])]
     private $id;
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
      */
+    #[Groups(['user:read', 'user:write'])]
     private $email;
 
     /**
      * @ORM\Column(type="json")
      */
+    #[Groups(['user:read', 'user:write'])]
     private $roles = [];
 
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
      */
+    #[Groups(['user:write'])]
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
+    #[Groups(['user:read', 'user:write'])]
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
+    #[Groups(['user:read', 'user:write'])]
     private $prenom;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
+    #[Groups(['user:read', 'user:write'])]
     private $agent;
 
     public function getId(): ?int
