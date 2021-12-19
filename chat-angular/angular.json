@@ -122,6 +122,32 @@
       },
       "tags": [],
       "implicitDependencies": ["chat-angular"]
+    },
+    "chat-angular-shell": {
+      "projectType": "library",
+      "root": "libs/chat-angular/shell",
+      "sourceRoot": "libs/chat-angular/shell/src",
+      "prefix": "chat-angular",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/chat-angular/shell"],
+          "options": {
+            "jestConfig": "libs/chat-angular/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/chat-angular/shell/src/**/*.ts",
+              "libs/chat-angular/shell/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
     }
   }
 }
