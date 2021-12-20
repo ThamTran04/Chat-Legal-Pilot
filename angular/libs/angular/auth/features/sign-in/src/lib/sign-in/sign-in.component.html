@@ -1,6 +1,7 @@
 <angular-auth-wrapper title="Sign-in">
-  <ng-template webTemplate="content">
+  <ng-template angularTemplate="content">
     <form
+      [formGroup]="loginForm"
       class="flex flex-col items-center space-y-4 font-mono"
       (ngSubmit)="onSubmit()"
     >

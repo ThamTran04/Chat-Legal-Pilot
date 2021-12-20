@@ -2,10 +2,10 @@ import { Directive, Input, TemplateRef } from '@angular/core';
 import { AngularTemplate } from './angular-template.type';
 
 @Directive({
-  selector: 'ng-template[angularAngularTemplate]',
+  selector: 'ng-template[angularTemplate]',
 })
 export class AngularTemplateDirective {
-  @Input() set Template(value: AngularTemplate) {
+  @Input() set angularTemplate(value: AngularTemplate) {
     if (!value) {
       throw new Error('Template cannot be empty');
     }
