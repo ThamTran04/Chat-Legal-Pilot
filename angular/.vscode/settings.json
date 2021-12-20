@@ -1,0 +1,92 @@
+{
+
+  "[typescript]": {
+
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+
+  },
+
+  "[html]": {
+
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+
+  },
+
+  // for TailwindCSS
+
+  "tailwindCSS.includeLanguages": {
+
+    "plaintext": "html"
+
+  },
+
+  "files.exclude": {
+
+    "node_modules": true,
+
+    "tools": true,
+
+    ".editorconfig": true,
+
+    "**/.eslintrc.json": true,
+
+    "angular.json": true,
+
+    ".prettier*": true,
+
+    "decorate-angular-cli.js": true,
+
+    "**/jest*": true,
+
+    "nx.json": true,
+
+    "package-lock.json": true,
+
+    "tailwind.config.js": true,
+
+    ".gitignore": true,
+
+    "**/README.md": true,
+
+    "**/tsconfig.app.json": true,
+
+    "**/tsconfig.editor.json": true,
+
+    "**/tsconfig.spec.json": true,
+
+    "**/tsconfig.json": true,
+
+    "**/*spec.ts": true,
+
+    "**/.browserslistrc": true,
+
+    "apps/angular/src/assets": true,
+
+    "apps/angular-e2e": true,
+
+    "apps/angular/src/environments": true,
+
+    "apps/angular/src/favicon.ico": true,
+
+    "apps/angular/src/polyfills.ts": true,
+
+    "apps/angular/src/index.html": true,
+
+    "apps/angular/src/main.ts": true,
+
+    "apps/angular/src/styles.scss": true,
+
+    "**/test-setup.ts": true,
+
+    "**/.gitkeep": true,
+
+    // "**/index.ts": true,
+
+
+
+
+  },
+
+
+
+}
