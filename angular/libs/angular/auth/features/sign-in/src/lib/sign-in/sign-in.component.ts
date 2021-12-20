@@ -1,6 +1,8 @@
+import { AuthService } from './../../../../../data-access/src/lib/services/auth.service';
 import { Component} from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from 'libs/angular/shared/data-access/models/user';
 
 @Component({
   selector: 'angular-sign-in',
@@ -17,7 +19,7 @@ export class SignInComponent{
 
   constructor(
     private readonly _formBuilder: FormBuilder,
-    // private readonly _authService: AuthService,
+    private readonly _authService: AuthService,
     private readonly _router: Router
   ) {}
 
@@ -27,23 +29,23 @@ export class SignInComponent{
   // }
 
   onSubmit(): void {
-    // if (!this.loginForm.valid)
-    //   this.message = 'Veuillez saisir votre email et votre mots de passe';
-    // else {
-    //   const userAuth: User = this.loginForm.value;
-    //   this._authService.login(userAuth).subscribe(
-    //     (res) => {
-    //       const result = JSON.parse(res);
-    //       const token = result.token;
-    //       const user = result.user;
-    //       localStorage.clear();
-    //       localStorage.setItem('access-token', token);
-    //       localStorage.setItem('user', JSON.stringify(user));
-    //       this._router.navigate(['/']);
-    //     },
-    //     (err) =>
-    //       (this.message = "Adresse d'email ou mots de passe sont incorrects")
-    //   );
-    // }
+    if (!this.loginForm.valid)
+      this.message = 'Veuillez saisir votre email et votre mots de passe';
+    else {
+      const userAuth: User = this.loginForm.value;
+      this._authService.login(userAuth).subscribe(
+        (res) => {
+          const result = JSON.parse(res);
+          const token = result.token;
+          const user = result.user;
+          localStorage.clear();
+          localStorage.setItem('access-token', token);
+          localStorage.setItem('user', JSON.stringify(user));
+          this._router.navigate(['/']);
+        },
+        (err) =>
+          (this.message = "Adresse d'email ou mots de passe sont incorrects")
+      );
+    }
   }
 }

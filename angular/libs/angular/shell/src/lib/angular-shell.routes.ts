@@ -1,3 +1,4 @@
+import { AuthGuard } from './../../../auth/util/src/lib/guards/auth.guard';
 import { Routes } from '@angular/router';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 
@@ -5,7 +6,16 @@ export const angularShellRoutes: Routes = [
   {
     path: '',
     component: AuthLayoutComponent,
-    children: [],
+    children: [
+      { path: '', redirectTo: 'chat', pathMatch: 'full' },
+      {
+        path: 'chat',
+        canActivateChild: [AuthGuard],
+        children:[
+          
+        ]
+      },
+    ],
   },
   {
     path: '',

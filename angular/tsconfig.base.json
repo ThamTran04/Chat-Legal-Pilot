@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular/angular/auth/data-access": [
+        "libs/angular/auth/data-access/src/index.ts"
+      ],
       "@angular/angular/auth/features/shell": [
         "libs/angular/auth/features/shell/src/index.ts"
       ],
@@ -24,6 +27,7 @@
       "@angular/angular/auth/features/ui/auth-wrapper": [
         "libs/angular/auth/features/ui/auth-wrapper/src/index.ts"
       ],
+      "@angular/angular/auth/util": ["libs/angular/auth/util/src/index.ts"],
       "@angular/angular/chat/features/details": [
         "libs/angular/chat/features/details/src/index.ts"
       ],

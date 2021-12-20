@@ -95,6 +95,32 @@
       },
       "tags": []
     },
+    "angular-auth-data-access": {
+      "projectType": "library",
+      "root": "libs/angular/auth/data-access",
+      "sourceRoot": "libs/angular/auth/data-access/src",
+      "prefix": "angular",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/angular/auth/data-access"],
+          "options": {
+            "jestConfig": "libs/angular/auth/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/angular/auth/data-access/src/**/*.ts",
+              "libs/angular/auth/data-access/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "angular-auth-features-shell": {
       "projectType": "library",
       "root": "libs/angular/auth/features/shell",
@@ -167,6 +193,32 @@
             "lintFilePatterns": [
               "libs/angular/auth/features/ui/auth-wrapper/src/**/*.ts",
               "libs/angular/auth/features/ui/auth-wrapper/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "angular-auth-util": {
+      "projectType": "library",
+      "root": "libs/angular/auth/util",
+      "sourceRoot": "libs/angular/auth/util/src",
+      "prefix": "angular",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/angular/auth/util"],
+          "options": {
+            "jestConfig": "libs/angular/auth/util/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/angular/auth/util/src/**/*.ts",
+              "libs/angular/auth/util/src/**/*.html"
             ]
           }
         }
