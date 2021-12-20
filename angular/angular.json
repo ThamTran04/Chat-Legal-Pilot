@@ -147,6 +147,110 @@
       },
       "tags": []
     },
+    "angular-auth-features-ui-auth-wrapper": {
+      "projectType": "library",
+      "root": "libs/angular/auth/features/ui/auth-wrapper",
+      "sourceRoot": "libs/angular/auth/features/ui/auth-wrapper/src",
+      "prefix": "angular",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/angular/auth/features/ui/auth-wrapper"],
+          "options": {
+            "jestConfig": "libs/angular/auth/features/ui/auth-wrapper/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/angular/auth/features/ui/auth-wrapper/src/**/*.ts",
+              "libs/angular/auth/features/ui/auth-wrapper/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "angular-chat-features-details": {
+      "projectType": "library",
+      "root": "libs/angular/chat/features/details",
+      "sourceRoot": "libs/angular/chat/features/details/src",
+      "prefix": "angular",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/angular/chat/features/details"],
+          "options": {
+            "jestConfig": "libs/angular/chat/features/details/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/angular/chat/features/details/src/**/*.ts",
+              "libs/angular/chat/features/details/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "angular-chat-features-list": {
+      "projectType": "library",
+      "root": "libs/angular/chat/features/list",
+      "sourceRoot": "libs/angular/chat/features/list/src",
+      "prefix": "angular",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/angular/chat/features/list"],
+          "options": {
+            "jestConfig": "libs/angular/chat/features/list/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/angular/chat/features/list/src/**/*.ts",
+              "libs/angular/chat/features/list/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "angular-chat-ui-list-chat": {
+      "projectType": "library",
+      "root": "libs/angular/chat/ui/list-chat",
+      "sourceRoot": "libs/angular/chat/ui/list-chat/src",
+      "prefix": "angular",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/angular/chat/ui/list-chat"],
+          "options": {
+            "jestConfig": "libs/angular/chat/ui/list-chat/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/angular/chat/ui/list-chat/src/**/*.ts",
+              "libs/angular/chat/ui/list-chat/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "angular-e2e": {
       "root": "apps/angular-e2e",
       "sourceRoot": "apps/angular-e2e/src",
@@ -175,6 +279,58 @@
       },
       "tags": [],
       "implicitDependencies": ["angular"]
+    },
+    "angular-shared-ui-angular-template": {
+      "projectType": "library",
+      "root": "libs/angular/shared/ui/angular-template",
+      "sourceRoot": "libs/angular/shared/ui/angular-template/src",
+      "prefix": "angular",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/angular/shared/ui/angular-template"],
+          "options": {
+            "jestConfig": "libs/angular/shared/ui/angular-template/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/angular/shared/ui/angular-template/src/**/*.ts",
+              "libs/angular/shared/ui/angular-template/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "angular-shared-ui-destroyable": {
+      "projectType": "library",
+      "root": "libs/angular/shared/ui/destroyable",
+      "sourceRoot": "libs/angular/shared/ui/destroyable/src",
+      "prefix": "angular",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/angular/shared/ui/destroyable"],
+          "options": {
+            "jestConfig": "libs/angular/shared/ui/destroyable/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/angular/shared/ui/destroyable/src/**/*.ts",
+              "libs/angular/shared/ui/destroyable/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
     },
     "angular-shell": {
       "projectType": "library",

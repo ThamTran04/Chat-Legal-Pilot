@@ -21,6 +21,24 @@
       "@angular/angular/auth/features/sign-in": [
         "libs/angular/auth/features/sign-in/src/index.ts"
       ],
+      "@angular/angular/auth/features/ui/auth-wrapper": [
+        "libs/angular/auth/features/ui/auth-wrapper/src/index.ts"
+      ],
+      "@angular/angular/chat/features/details": [
+        "libs/angular/chat/features/details/src/index.ts"
+      ],
+      "@angular/angular/chat/features/list": [
+        "libs/angular/chat/features/list/src/index.ts"
+      ],
+      "@angular/angular/chat/ui/list-chat": [
+        "libs/angular/chat/ui/list-chat/src/index.ts"
+      ],
+      "@angular/angular/shared/ui/angular-template": [
+        "libs/angular/shared/ui/angular-template/src/index.ts"
+      ],
+      "@angular/angular/shared/ui/destroyable": [
+        "libs/angular/shared/ui/destroyable/src/index.ts"
+      ],
       "@angular/angular/shell": ["libs/angular/shell/src/index.ts"]
     }
   },
