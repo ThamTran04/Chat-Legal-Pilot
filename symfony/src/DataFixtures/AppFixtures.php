@@ -39,7 +39,7 @@ class AppFixtures extends Fixture
 
         // creating others users
         for ($i = 1; $i <= 3; $i++) {
-            $this->_createUser($manager, "nom$i", "prenom$i", "user$i@addixware.fr", ["Junior"], "Aix");
+            $this->_createUser($manager, "nom$i", "prenom$i", "user$i@gmail.fr", ["Junior"], "Aix");
         }
 
         $manager->flush();
